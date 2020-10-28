@@ -19,7 +19,8 @@ const Col = styled.div`
 
   ${p => css`
     ${DIMENSIONS.map(d =>
-    p[d] !== undefined && config(p).breakpoints[d] && config(p).media[d]`
+    p[d] !== undefined && config(p).breakpoints[d] !== undefined && config(p).media[d] !== undefined`
+      background: red;
       flex: 1 1 ${(p[d] / config(p).columns[d]) * 100}%;
       max-width: ${(p[d] / config(p).columns[d]) * 100}%;
     `)}
